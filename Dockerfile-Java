@@ -1,0 +1,5 @@
+FROM openjdk:8
+RUN echo "java -version"
+ADD /target/login-registration.jar /home/login-registration.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "/home/login-registration.jar"]
